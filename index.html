@@ -1,132 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>One Page Index</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container">
-      <h1 class="title">One Page Apps</h1>
-      <h2 class="subtitle">For learning... forever...</h2>
-    </div>
-  </div>
-</section>
+		<!-- Page Title: find this on the page tab -->
+		<title>
+		Bootstrap Vue2 App
+		</title>
 
-<section class="section">
-    <div class="container">
+		<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-      <div class="columns">
-      	<div class="column is-two-thirds">
+		<!-- Local styles. you can of course add a .css file here for cleaner interface -->
+		<style type="text/css">
 
-      		<h3 class="title">Usage</h3>
+			.isRed {
+				color:red;
+			}
 
-          <hr>
+		</style>
 
-      		<p>There are a couple of one-page app versions for you to play with:</p>
+	</head>
 
-	         <br>
-      		<p>
-              <a class="button is-outlined is-default" href="./vanilla/index.html">Vanilla</a>
-          </p>
-            <br>
-          <p>
-            ...and
-          </p>
+	<!-- Visible page content goes below here -->
+	<body>
+			<div class="container-fluid">
 
-        		<br>
-          <p>
-            <a class="button is-outlined is-primary" href="./awesomer/index.html">Awesomer</a>
-          </p>
 
-            <br>
-	        <p>
-	        	The purpose of these files is to have a raw working version to play with, and nicer one to reference. The rougher "vanilla" version will have comments marking it up so you can remember what is going on. If you get stuck, just re-clone/download, or click through the <a href="https://github.com/jakeYeager/one-page-vue2" target="_blank">Github repo</a> version to see what the origional file looked like.
-	        </p>
-	        <br>
-	        <br>
 
-	        <h3 class="title">CSS &amp; the UI</h3>
+		<h1>Bootstrap Version. Woop woop</h1>
 
-          <hr>
+			<a href="../index.html">
+				<button class="btn btn-default">
+					<span class="fa fa-fw fa-chevron-left"></span> Back Home
+				</button>
+			</a>
 
-	        <p>
-	        	When building your one-page app, think of the final purpose of what your doing or sorting with your app before you craft your final User Interface (or "look-and-feel") with CSS.
-	        </p>
-	        <p>
-	        	Is it a blog, or a store product directory, or a image gallery? The main element you are representing will most often dictate how you set up the final page structure.
-	        </p>
-      	</div>
+			<br>
 
-      	<div class="column">
+			<hr>
 
-      		<h2 class="title">Links</h2>
+		<div id="root"><!-- This is IMPORTANT!
+		It is the root (main) container for the Vue2 script -->
 
-          <hr>
+		<div class="col-md-4"> <!-- page left -->
 
-      		<ul>
+			<input class="form-control input-lg" type="text" v-model="keyword" name="search" placeholder="Search..."> <!-- This is IMPORTANT!
+			It is the binding to the Vue2 model that processes the data -->
 
-            <li>
-              <i class="fa fa-fw fa-cube"></i> <a href="https://vuejs.org/" target="_blank">Vue2</a> framework
-            </li>
+			<div class="help-block">Type keyword search terms</div>
 
-            <li>
-              <i class="fa fa-fw fa-cube"></i> <a href="https://vuejs.org/v2/examples/" target="_blank">Vue2</a> examples
-            </li>
+		</div> <!-- end page left -->
 
-            <li>
-              <i class="fa fa-fw fa-youtube"></i> <a href="https://www.youtube.com/watch?v=VPUdtEf3oXI&t=304s" target="_blank">How-To:</a> this app from scratch
-            </li>
+		<div class="col-md-8"> <!-- page right -->
 
-            <li>
-              <i class="fa fa-fw fa-code"></i> <a href="http://getbootstrap.com/getting-started/" target="_blank">Bootstrap</a> CSS
-            </li>
+			<div v-for="post in filterlist"> <!-- This is IMPORTANT!
+			It is the 'for' loop, or machine that cycles over the data -->
 
-            <li>
-              <i class="fa fa-fw fa-code"></i> <a href="http://materializecss.com/" target="_blank">Material</a> CSS
-            </li>
+				<div class="panel panel-default">
+					<div class="panel-heading">
 
-            <li>
-              <i class="fa fa-fw fa-code"></i> <a href="http://bulma.io/documentation/layout/container/" target="_blank"> Bluma</a> CSS
-            </li>
+						<h3><a class="isRed" :href="post.link">{{post.title}}</a></h3>
 
-            <li>
-              <i class="fa fa-fw fa-code"></i> <a href="http://fontawesome.io/icons/" target="_blank">Font-Awesome</a> Icons
-            </li>
+					</div>
+					<div class="panel-body">
 
-            <li>
-              <i class="fa fa-fw fa-code"></i> <a href="https://unsplash.it/">Unplash.it</a> placeholder images
-            </li>
+						<img class="img-circle" :src="post.img"> <!-- this is bound to the img slot -->
+						<h4><em>by {{post.author}}</em></h4>
 
-      		</ul>
+						<p>{{post.body}}</p> <!-- this is bound to the body slot -->
 
-      	</div>
+					</div>
 
-      </div>
+				</div> <!-- end panel -->
 
-    </div>
-  </section>
+			</div> <!-- end filterlist -->
 
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          Yay! <strong>The Footer</strong> which means you can stop scrolling.
-        </p>
-        <p>
-          <a class="icon" href="#">
-            <i class="fa fa-money"></i>
-          </a>
-        </p>
-      </div>
-    </div>
-  </footer>
+		</div> <!-- end page right -->
+
+	</div>  <!-- end root div -->
+
+</div> <!-- end page container -->
 
 </body>
+
+	<!-- Javascript must be placed here at the bottom of the page
+		so that all the HTML content will be processed fist by the browser
+		then procesed by the javascript -->
+
+	<!-- This Vue2 script package is pulled in remotely via a CDN -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/vue" ></script>
+
+	<!-- This is your local javascript that will use Vue2 -->
+	<script src="bootstrap.js"></script>
+
 </html>
