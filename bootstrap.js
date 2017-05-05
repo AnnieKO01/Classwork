@@ -37,10 +37,10 @@ const app = new Vue({
 		postlist: [
 			// constructed Post item
 			new Post(
-				'First Post! Yay!', 		// this is the TITLE place in the class
+				'Intro to Owls', 		// this is the TITLE place in the class
 				'https://google.com',	// this is the LINK place in the class
 				'An Author',			// this is the AUTHOR place in the class
-				'https://unsplash.it/200',	// this is the IMAGE place in the class
+				'http://d2fbmjy3x0sdua.cloudfront.net/cdn/farfuture/3RAWf-PIbJAF92GIerajU7-ExG_7fZRngCA0nc-N-V0/mtime:1422549456/sites/default/files/Barred_Owl_m50-4-005_l.jpg',	// this is the IMAGE place in the class
 				'Lorem ipsum dolor sit amet, consectetur.' // this is the BODY place in the class
 				),
 
