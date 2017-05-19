@@ -40,24 +40,24 @@ const app = new Vue({
 				'Intro to Owls', 		// this is the TITLE place in the class
 				'https://google.com',	// this is the LINK place in the class
 				'An Author',			// this is the AUTHOR place in the class
-				'http://d2fbmjy3x0sdua.cloudfront.net/cdn/farfuture/3RAWf-PIbJAF92GIerajU7-ExG_7fZRngCA0nc-N-V0/mtime:1422549456/sites/default/files/Barred_Owl_m50-4-005_l.jpg',	// this is the IMAGE place in the class
-				'Lorem ipsum dolor sit amet, consectetur.' // this is the BODY place in the class
+				'http://img4.wikia.nocookie.net/__cb20120803193332/dumbledoresarmyroleplay/images/1/1d/Xyli_Snowy_Owl.jpg',	// this is the IMAGE place in the class
+				'Owls are an essential part of the wizarding community, helping the wizards to communicate.' // this is the BODY place in the class
 				),
 
 			new Post(
-				'Second Post: Lorem',
+				'Wands',
 				'https://vuejs.org',
-				'Sammie Author',
-				'img-200.jpg', // this is a local image in the same folder as the js script
-				'This has a local image. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra euismod euismod. Nulla leo est, venenatis at fringilla eget, tincidunt sed justo. In efficitur dui odio, sit amet finibus sem hendrerit ut. Etiam vestibulum sem vel metus lobortis, vitae dictum metus sagittis. Nulla facilisi. '
+				'An Author',
+				'http://img04.deviantart.net/cd7c/i/2011/190/8/3/hp_wands__batch_1_by_vampiremage-d3lhkmi.jpg', // this is a local image in the same folder as the js script
+				'The wand chooses the wizard.'
 				),
 
 			new Post(
-				'This Post: Crazy Fredrick',
+				'Quidditch',
 				'https://google.com',
-				'Bob Author',
-				'https://unsplash.it/200',
-				'Crazy Fredrick bought many very exquisite opal jewels.'
+				'An Author',
+				'http://harry-potter-sounds.ambient-mixer.com/images_template/d/d/5/dd56b99e865d99c0fa4f715dffd79c3f_full.jpg',
+				'Quidditch is the wizarding sport that many like to participate in.'
 				),
 
 			new Post(
