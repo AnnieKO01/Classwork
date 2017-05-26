@@ -38,7 +38,7 @@ const app = new Vue({
 			// constructed Post item
 			new Post(
 				'Intro to Owls', 		// this is the TITLE place in the class
-				'https://google.com',	// this is the LINK place in the class
+				'https://www.hp-lexicon.org/creature/birds/owl/',	// this is the LINK place in the class
 				'An Author',			// this is the AUTHOR place in the class
 				'http://img4.wikia.nocookie.net/__cb20120803193332/dumbledoresarmyroleplay/images/1/1d/Xyli_Snowy_Owl.jpg',	// this is the IMAGE place in the class
 				'Owls are an essential part of the wizarding community, helping the wizards to communicate.' // this is the BODY place in the class
@@ -46,7 +46,7 @@ const app = new Vue({
 
 			new Post(
 				'Wands',
-				'https://vuejs.org',
+				'https://www.pottermore.com/explore-the-story/wands',
 				'An Author',
 				'http://img04.deviantart.net/cd7c/i/2011/190/8/3/hp_wands__batch_1_by_vampiremage-d3lhkmi.jpg', // this is a local image in the same folder as the js script
 				'The wand chooses the wizard.'
@@ -54,26 +54,26 @@ const app = new Vue({
 
 			new Post(
 				'Quidditch',
-				'https://google.com',
+				'https://www.pottermore.com/collection/quidditch',
 				'An Author',
 				'http://harry-potter-sounds.ambient-mixer.com/images_template/d/d/5/dd56b99e865d99c0fa4f715dffd79c3f_full.jpg',
 				'Quidditch is the wizarding sport that many like to participate in.'
 				),
 
 			new Post(
-				'Another Post: promptly judged',
-				'https://vuejs.org',
-				'Jane Author',
-				'https://unsplash.it/200',
-				'We promptly judged antique ivory buckles for the next prize.'
+				'Getting Sorted',
+				'https://www.pottermore.com/explore-the-story/the-sorting-hat',
+				'An Author',
+				'http://images.amcnetworks.com/bbcamerica.com/wp-content/uploads/2014/12/sortinghat.jpg',
+				'The sorting hat decides which house at Hogwarts you will be in.'
 				),
 
 			new Post(
-				'Last Post: Jaded zombies',
-				'https://google.com',
-				'Anptoght Author',
-				'#',
-				'Jaded zombies acted quaintly but kept driving their oxen forward.'
+				'The Houses of Hogwarts',
+				'https://www.hp-lexicon.org/thing/hogwarts-houses',
+				'An Author',
+				'http://az616578.vo.msecnd.net/files/2015/06/13/635698218900226149-1221753908_Hogwarts_Crest_1.imgopt1000x70.png',
+				'There are four houses in Hogwarts, Gryffindor, Hufflepuff, Ravenclaw and Slytherin. Gryffindor are known to be brave and daring. Hufflepuff are considered kind and loyal. Ravenclaws are the intelligent and Slytherins are the cunning.'
 				)
 		]
 	},
