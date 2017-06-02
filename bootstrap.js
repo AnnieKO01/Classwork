@@ -72,7 +72,7 @@ const app = new Vue({
 				'The Houses of Hogwarts',
 				'https://www.hp-lexicon.org/thing/hogwarts-houses',
 				'An Author',
-				'http://az616578.vo.msecnd.net/files/2015/06/13/635698218900226149-1221753908_Hogwarts_Crest_1.imgopt1000x70.png',
+				'https://images-na.ssl-images-amazon.com/images/I/51kJhAP0XoL._SX355_.jpg',
 				'There are four houses in Hogwarts, Gryffindor, Hufflepuff, Ravenclaw and Slytherin. Gryffindor are known to be brave and daring. Hufflepuff are considered kind and loyal. Ravenclaws are the intelligent and Slytherins are the cunning.'
 				)
 		]
